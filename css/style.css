@@ -141,7 +141,7 @@ h6 {
   50%{ border-color: transparent; }
 }
  
-.h1{
+h1 {
   width: 27ch;
   overflow: hidden; 
   white-space: nowrap;
