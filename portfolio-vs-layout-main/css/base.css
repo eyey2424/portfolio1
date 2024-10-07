@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --primary-font: 'Source Sans 3', sans-serif;
+    --secondary-font:  'JetBrains Mono', monospace;
+    --tertiary-font: 'Raleway', sans-serif;
+    --main-bg: #282a36;
+    --titlebar-bg: #1e1f29;
+    --sidebar-bg: #343746;
+    --explorer-bg: #21222c;
+    --explorer-hover-bg: #313241;
+    --tabs-bg: #191a21;
+    --tab-active-bg: #282a36;
+    --tab-border: #21222c;
+    --bottombar-bg: #191a21;
+    --bottombar-hover-bg: #4f4f52;
+    --minimize-btn-clr: #f1fa8c;
+    --maximize-btn-clr: #50fa7b;
+    --close-btn-clr: #f55;
+    --accent-clr: #bd93f9;
+    --scrollbar-thumb-clr: #6969dd;
+    --scrollbar-track-clr: #e0e0e0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#tabbar,
+#home,
+#about,
+#contact{
+    scrollbar-color: var(--scrollbar-thumb-clr) var(--scrollbar-track-clr);
+    scrollbar-width: auto;
+}
+
+#tabbar::-webkit-scrollbar {
+    height: 3.5px;
+}
+
+#tabbar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#tabbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-clr);
+    border-radius: 100px;
+}
+
+
+#home::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+#about::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+#contact::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+.slide-up-fade-in{
+    animation: slide-up-fade-in ease 1s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+    -webkit-animation: slide-up-fade-in ease 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+    -moz-animation: slide-up-fade-in ease 1s;
+    -moz-animation-iteration-count: 1;
+    -moz-transform-origin: 50% 50%;
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+    -o-animation: slide-up-fade-in ease 1s;
+    -o-animation-iteration-count: 1;
+    -o-transform-origin: 50% 50%;
+    -o-animation-fill-mode:forwards; /*Not implemented yet*/
+    -ms-animation: slide-up-fade-in ease 1s;
+    -ms-animation-iteration-count: 1;
+    -ms-transform-origin: 50% 50%;
+    -ms-animation-fill-mode:forwards; /*IE 10+*/
+
+    opacity:0;
+    opacity: 1\9;
+
+}
+
+
+@keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        transform:  translate(0px,50px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+@-moz-keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        -moz-transform:  translate(0px,50px)  ;
+    }
+    100% {
+        opacity:1;
+        -moz-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-webkit-keyframes slide-up-fade-in {
+    0% {
+        opacity:0;
+        -webkit-transform:  translate(0px,50px)  ;
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-o-keyframes slide-up-fade-in {
+    0% {
+        opacity:0;
+        -o-transform:  translate(0px,50px)  ;
+    }
+    100% {
+        opacity:1;
+        -o-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-ms-keyframes slide-up-fade-in {
+    0% {
+        opacity:0;
+        -ms-transform:  translate(0px,50px)  ;
+    }
+    100% {
+        opacity:1;
+        -ms-transform:  translate(0px,0px)  ;
+    }
+} 
